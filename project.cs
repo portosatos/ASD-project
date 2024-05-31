@@ -31,4 +31,38 @@ class ToDoList
     {
         tasks.Push(new Task(description));
     }
-}
+
+    public void RemoveTask(string description)
+    {
+        var tempStack = new Stack<Task>();
+        bool removed = false;
+
+        while (tasks.Count > 0)
+        {
+            var task = tasks.Pop();
+            if (!removed && task.Description == description)
+            {
+                removed = true;
+            }
+            else
+            {
+                tempStack.Push(task);
+            }
+        }
+
+        while (tempStack.Count > 0)
+        {
+            tasks.Push(tempStack.Pop());
+        }
+    }
+
+    public void PrintAllTasks()
+    {
+        Console.WriteLine("All Tasks:");
+        var tempStack = new Stack<Task>(tasks);
+
+        foreach (var task in tempStack)
+        {
+            Console.WriteLine(task);
+        }
+    }
