@@ -18,3 +18,17 @@ class Task
     }
 }
 
+class ToDoList
+{
+    private Stack<Task> tasks;
+
+    public ToDoList()
+    {
+        tasks = new Stack<Task>();
+    }
+
+    public void AddTask(string description)
+    {
+        tasks.Push(new Task(description));
+    }
+}
