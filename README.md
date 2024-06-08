@@ -1,5 +1,5 @@
 ﻿# todo list
-
+![Aoi Todo](https://static.wikia.nocookie.net/jujutsu-kaisen/images/5/59/Aoi_Todo_%28Anime_2%29.png/revision/latest?cb=20231218145944)
 # TaskManager Console Application
 
 
