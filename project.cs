@@ -66,3 +66,65 @@ class ToDoList
             Console.WriteLine(task);
         }
     }
+
+}
+
+
+
+    public void PrintCompletedTasks()
+    {
+        Console.WriteLine("Completed Tasks:");
+        var tempStack = new Stack<Task>(tasks);
+
+        foreach (var task in tempStack)
+        {
+            if (task.IsCompleted)
+            {
+                Console.WriteLine(task);
+            }
+        }
+    }
+
+    public void PrintPendingTasks()
+    {
+        Console.WriteLine("Pending Tasks:");
+        var tempStack = new Stack<Task>(tasks);
+
+        foreach (var task in tempStack)
+        {
+            if (!task.IsCompleted)
+            {
+                Console.WriteLine(task);
+            }
+        }
+    }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ToDoList toDoList = new ToDoList();
+
+        toDoList.AddTask("Research ARW");
+        toDoList.AddTask("ML lab work");
+        toDoList.AddTask("Team Contract PM");
+
+        toDoList.PrintAllTasks();
+
+        toDoList.MarkTaskAsCompleted("ML lab work");
+
+        toDoList.PrintCompletedTasks();
+        toDoList.PrintPendingTasks();
+
+        toDoList.EditTaskDescription("Team Contract PM", "Team Contract PM - Updated");
+
+        toDoList.PrintAllTasks();
+
+        toDoList.RemoveTask("Research ARW");
+
+        toDoList.PrintAllTasks();
+
+        toDoList.ClearAllTasks();
+        toDoList.PrintAllTasks();
+    }
+}
