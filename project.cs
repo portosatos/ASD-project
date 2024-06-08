@@ -57,34 +57,7 @@ class ToDoList
         }
     }
 
-    public void PrintAllTasks()
-    {
-        Console.WriteLine("All Tasks:");
-        var tempStack = new Stack<Task>(tasks);
-
-        foreach (var task in tempStack)
-        {
-            Console.WriteLine(task);
-        }
-    }
-               var task = tasks.Pop();
-            if (task.Description == oldDescription)
-            {
-                task.Description = newDescription;
-            }
-            tempStack.Push(task);
-        }
-
-        while (tempStack.Count > 0)
-        {
-            tasks.Push(tempStack.Pop());
-        }
-    }
-
-    public void ClearAllTasks()
-    {
-        tasks.Clear();
-    } public void MarkTaskAsCompleted(string description)
+    public void MarkTaskAsCompleted(string description)
     {
         var tempStack = new Stack<Task>();
 
@@ -110,9 +83,35 @@ class ToDoList
 
         while (tasks.Count > 0)
         {
+            var task = tasks.Pop();
+            if (task.Description == oldDescription)
+            {
+                task.Description = newDescription;
+            }
+            tempStack.Push(task);
+        }
 
+        while (tempStack.Count > 0)
+        {
+            tasks.Push(tempStack.Pop());
+        }
+    }
 
-Nurik
+    public void ClearAllTasks()
+    {
+        tasks.Clear();
+    }
+
+    public void PrintAllTasks()
+    {
+        Console.WriteLine("All Tasks:");
+        var tempStack = new Stack<Task>(tasks);
+
+        foreach (var task in tempStack)
+        {
+            Console.WriteLine(task);
+        }
+    }
 
     public void PrintCompletedTasks()
     {
