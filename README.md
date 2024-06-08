@@ -60,11 +60,6 @@ Adds a new task with a description.
 taskManager.AddTask("Task description");
 ```
 
-
-# Task Manager
-
-## Methods
-
 ### RemoveTask
 Removes a task by its ID.
 
@@ -125,13 +120,13 @@ taskManager.PrintPendingTasks();
 ```
 
 
-## здесь нужно написать кто что сделал 
 Teamwork
 This project was a collaborative effort. Below is a summary of contributions:
 
-Alice: Implemented the AddTask, RemoveTask, and PrintAllTasks methods. Set up the initial project structure.
-Bob: Implemented the MarkTaskAsCompleted, EditTaskDescription, and ClearAllTasks methods. Contributed to debugging and optimization.
-Charlie: Implemented the PrintCompletedTasks and PrintPendingTasks methods. Improved the user interface and documentation.
+Nurlan: 
+Aibike: 
+Emir: I did not do the hardest part, which is to output completed tasks and also pending tasks. it was not hard because I looped through the tasks and just printed them. also I made a new class Program which is needed to see how our cloud sheet works.
+
 Version control and collaboration were managed using Git. Regular commits, branching, and detailed commit messages were used to track progress and ensure smooth teamwork.
 
 
@@ -148,6 +143,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 
 
-## Авторы проекта `Асанкожоев Нурлан` `Буйлашева Айбике` `Дастанов Эмир` 
+## Author`s of the project `Asankozhoev Nurlan` `Builasheva Aibike` `Dastanov Emir` 
 
 
