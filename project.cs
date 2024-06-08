@@ -12,6 +12,7 @@ class Task
         Description = description;
         IsCompleted = false;
     }
+
     public override string ToString()
     {
         return $"{Description} (Completed: {IsCompleted})";
@@ -66,10 +67,52 @@ class ToDoList
             Console.WriteLine(task);
         }
     }
+               var task = tasks.Pop();
+            if (task.Description == oldDescription)
+            {
+                task.Description = newDescription;
+            }
+            tempStack.Push(task);
+        }
 
-}
+        while (tempStack.Count > 0)
+        {
+            tasks.Push(tempStack.Pop());
+        }
+    }
+
+    public void ClearAllTasks()
+    {
+        tasks.Clear();
+    } public void MarkTaskAsCompleted(string description)
+    {
+        var tempStack = new Stack<Task>();
+
+        while (tasks.Count > 0)
+        {
+            var task = tasks.Pop();
+            if (task.Description == description)
+            {
+                task.IsCompleted = true;
+            }
+            tempStack.Push(task);
+        }
+
+        while (tempStack.Count > 0)
+        {
+            tasks.Push(tempStack.Pop());
+        }
+    }
+
+    public void EditTaskDescription(string oldDescription, string newDescription)
+    {
+        var tempStack = new Stack<Task>();
+
+        while (tasks.Count > 0)
+        {
 
 
+Nurik
 
     public void PrintCompletedTasks()
     {
@@ -98,6 +141,7 @@ class ToDoList
             }
         }
     }
+}
 
 class Program
 {
