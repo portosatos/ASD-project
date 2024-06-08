@@ -123,9 +123,9 @@ taskManager.PrintPendingTasks();
 Teamwork
 This project was a collaborative effort. Below is a summary of contributions:
 
-Nurlan: 
-Aibike: 
-Emir: I did not do the hardest part, which is to output completed tasks and also pending tasks. it was not hard because I looped through the tasks and just printed them. also I made a new class Program which is needed to see how our cloud sheet works.
+Nurlan: My task was to implement methods such as MarkTaskAsCompleted, EditTaskDescription and ClearAllTasks, where in all methods all tasks are removed from the stack and certain processes are performed. During the work, all additions and changes were commented for the readability of the code.
+Aibike: I have initialized class Task and class ToDoList. In class ToDoList I added methods: AddTask, RemoveTask, PrintAllTasks. The class Task did not have any special difficulties as with the class ToDoList. The most difficult thing was to understand how to implement the RemoveTask method. Also, I created a new branch in Git. It was hard to figure out at first, but with practice it became much easier
+Emir: I did not do the hardest part, which is to output completed tasks and also pending tasks. it was not hard because I looped through the tasks and just printed them. also I made a new class Program which is needed to see how our cloud sheet works. I've also been working with github. 
 
 Version control and collaboration were managed using Git. Regular commits, branching, and detailed commit messages were used to track progress and ensure smooth teamwork.
 
@@ -143,6 +143,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 
 
-## Author`s of the project `Asankozhoev Nurlan` `Builasheva Aibike` `Dastanov Emir` 
+## Author's of the project `Asankozhoev Nurlan` `Builasheva Aibike` `Dastanov Emir` 
 
 
